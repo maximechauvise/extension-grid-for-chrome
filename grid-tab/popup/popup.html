@@ -2,22 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Grid Tab</title>
+  <script src="../shared/theme.js"></script>
   <link rel="stylesheet" href="popup.css" />
+  <title>Grid Tab</title>
 </head>
 <body>
   <header>
-    <span class="title">Grid Tab</span>
-    <button id="btn-new" title="Nouveau layout">+</button>
+    <div class="header-left">
+      <div class="header-icon">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="title">Grid Tab</span>
+    </div>
+    <div class="header-right">
+      <button id="btn-theme" title="Mode clair">☀</button>
+      <button id="btn-new" title="Nouveau layout">+</button>
+    </div>
   </header>
 
-  <main id="layout-list">
-    <p class="empty-state">Aucun layout.<br>Crée-en un via le bouton +</p>
-  </main>
+  <main id="layout-list"></main>
 
   <footer>
-    <button id="btn-close-all">Fermer les fenêtres</button>
-    <button id="btn-manage">Gérer les layouts</button>
+    <div class="footer-buttons">
+      <button id="btn-close-all">✕ Fermer les fenêtres</button>
+      <button id="btn-manage">⚙ Gérer</button>
+    </div>
+    <div class="omnibox-hint">Raccourci : <code>grid [nom]</code> dans la barre URL</div>
   </footer>
 
   <script src="../shared/storage.js"></script>
