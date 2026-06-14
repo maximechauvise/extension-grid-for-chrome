@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Grid Tab",
+  "version": "2.0.0",
+  "description": "Ouvre plusieurs sites simultanément dans des fenêtres Chrome côte à côte.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "windows",
+    "system.display"
+  ],
+  "omnibox": { "keyword": "grid" },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
